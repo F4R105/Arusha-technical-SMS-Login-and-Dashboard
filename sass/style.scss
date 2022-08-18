@@ -1,0 +1,335 @@
+:root{
+    scroll-behavior: smooth;
+    // LIGHT THEME
+    --blue: #638ca5fe;
+    --green: #27a844ff;
+    --red: #ff0000ff;
+    --text-color: #4d4d4dff;
+    --bg: #ecf1f4ff;
+    --card-title: #ecececff;
+
+    // DARK THEME
+    // --bg: rgb(1, 5, 2);
+
+    @font-face {
+        font-family: Poppins;
+        src: url(resources/Poppins-Black.ttf);
+    }
+}
+
+body{
+    margin: 0;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background-color: var(--bg);
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        border: none;
+        background-color: none;
+    }
+}
+
+@import 'home';
+
+.grid-dashboard{
+    display: grid;
+    grid-template-columns: 15em auto 18em;
+    max-width: 1366px;
+    margin: 0 auto;
+    box-shadow: 0 0 50px 20px rgba(0,0,0,0.1);
+}
+
+aside{
+    // outline: 2px solid blue;
+    min-height: 100vh;
+}
+
+.leftAside{
+    min-width: 200px;
+    padding: 1em;
+    // outline: 2px solid red;
+}
+
+main{
+    // outline: 2px solid red;
+    min-height: 100vh;
+    padding: 2em;
+}
+
+.rightAside{
+    background-color: var(--blue);
+    padding: 1em;
+    min-width: 200px;
+}
+
+// MAIN
+
+#dashboard_title{
+    color: var(--blue);
+    // outline: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#greetings{
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.dashboard_card{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.05);
+    background-color: white;
+    margin-bottom: 1.5em;
+
+    .card_title_container{
+        background-color: var(--card-title);
+        padding: 0.2em;
+        // font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        color: var(--blue);
+
+        .icon{
+            width: 30px;
+            height: 30px;
+            // outline: 1px solid red;
+        }
+    }
+
+    .card_info{
+        padding: 0.5em;
+    }
+}
+
+#reg_man{
+    display: flex;
+    gap: 1em;
+
+    #registration{
+        border: 2px solid rgba(0,0,0,0.3);
+        width: 50%;
+        
+        .card_info{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1em;
+            padding: 0.5em;
+        }
+
+        #reg_btn{
+            display: block;
+            background-color: var(--green);
+            color: var(--bg);
+            cursor: pointer;
+            padding: 0.5em 0.8em;
+            border-radius: 20px;
+            outline: 2px solid var(--green);
+            transition: outline-color 0.2s ease-in-out;
+            
+            &:hover{
+                outline: 2px solid var(--bg);
+            }
+        }
+    }
+    
+    #user_manuals{
+        width: 30%;
+
+        .card_info a{
+            display: block;
+            color: var(--text-color);
+            font-size: 0.8rem;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+#announcement{
+    width: 100%;
+
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0.8em;
+    }
+
+    .date{
+        font-size: 0.7rem;
+        font-style: italic;
+        color: #008080ff;
+    }
+
+    #readAll_btn{
+        display: block;
+        background-color: var(--green);
+        color: var(--bg);
+        cursor: pointer;
+        padding: 0.5em 0.8em;
+        border-radius: 20px;
+        outline: 2px solid var(--green);
+        transition: outline-color 0.2s ease-in-out;
+        
+        &:hover{
+            outline: 2px solid var(--bg);
+        }
+    }
+}
+
+table{
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+
+    th{
+        padding: 0.5em;
+    }
+
+    td{
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        padding: 0.2em;
+    }
+}
+
+// LEFT ASIDE
+
+#systembrand__container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2em;
+    pointer-events: none;
+    cursor: default;
+
+    #college__logo{
+        flex: 1;
+        // outline: 2px solid red;
+        display: grid;
+        place-items: center;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    #system__name{
+        flex: 3;
+        font-size: 0.8rem;
+        color: var(--blue);
+
+        h5{
+            font-size: 0.5rem;
+        }
+    }
+}
+
+#asideLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // outline: 2px solid red;
+    min-height: 85vh;
+
+    a{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: var(--card-title);
+        color: var(--blue);
+        text-transform: uppercase;
+        padding: 0.3em 0.2em;
+        margin-bottom: 0.5em;
+        transition: transform 0.2s ease-in-out;
+        // outline: 2px solid red;
+    }
+
+    a:hover{
+        transform: translateX(0.5em);
+    }
+
+    .asideIcon{
+        width: 20px;
+        height: 20px;
+        fill: var(--blue);
+        // outline: 2px solid red;
+    }
+}
+
+
+// RIGHT ASIDE
+
+#student{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2em;
+
+    #student__img{
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background-color: var(--bg);
+        display: grid;
+        place-items: center;
+        font-size: 1.7rem;
+        color: var(--green);
+    }
+
+    #student__name{
+        color: var(--bg);
+    }
+}
+
+#student_info{
+
+    font-size: 0.8rem;
+    color: var(--bg);
+
+    .info{
+        display: flex;
+        gap: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .key{
+        font-weight: bold;
+    }
+}
+
+#myAccount__btn{
+    display: block;
+    margin-top: 5em;
+    color: var(--text-color);
+    padding: 0.5em 0.8em;
+    border-radius: 20px;
+    outline: 2px solid var(--blue);
+    transition:
+        outline-color 0.2s ease-in-out,
+        background-color 0.2s ease-in-out;
+
+    &:hover{
+        background-color: var(--green);
+        outline: 2px solid var(--bg);
+        color: var(--bg);
+        cursor: pointer;
+    }
+}
+
+@import 'queries';

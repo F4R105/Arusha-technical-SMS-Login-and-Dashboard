@@ -1,0 +1,124 @@
+@media screen and (max-width: 1200px){
+
+    #reg_man{
+        // flex-direction: column;
+        // grid-column: 1/13;
+        // outline: 2px solid red;
+
+        #registration{
+            width: 50%;
+
+            .card_info{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        #user_manuals{
+            width: 50%;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 990px){
+
+    main{
+        grid-column: 2/4;
+    }
+
+    .rightAside{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 850px){
+
+    #reg_man{
+        flex-direction: column;
+        // grid-column: 1/13;
+        // outline: 2px solid red;
+
+        #registration{
+            width: 100%;
+        }
+
+        #user_manuals{
+            width: 100%;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 768px){
+
+    .grid-dashboard{
+        grid-template-columns: 1fr 1fr 1fr;
+        // overflow: hidden;
+    }
+
+    main{
+        padding: 0.5em;
+        grid-column: 1/4;
+        // outline: 2px solid red;
+    }
+
+    .rightAside{
+        display: none;
+    }
+
+    .leftAside{
+        position: fixed;
+        background-color: var(--bg);
+        box-shadow: 0 5px 5px 5px rgba(0,0,0,0.2);
+        width: 200px;
+        transform: translateX(-220px);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .leftAside.opened{
+        transform: translateX(0);
+    }
+
+    #reg_man{
+
+        #registration{
+            width: 100%;
+
+            .card_info{
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        #user_manuals{
+            width: 100%;
+        }
+    }
+
+    table{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    #reg_man{
+        flex-direction: column;
+        // grid-column: 1/13;
+        // outline: 2px solid red;
+
+        #registration{
+            width: 100%;
+        }
+
+        #user_manuals{
+            width: 100%;
+        }
+    }
+
+}
